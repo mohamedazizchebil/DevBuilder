@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package generation;
+
+service GenerationService {
+    rpc generateProject (GenerationRequest) returns (GenerationResponse);
+}
+
+message GenerationRequest {
+    string framework = 1;
+    string language = 2;
+    string projectName = 3; 
+}
+
+message GenerationResponse {
+    bool success = 1;
+    string message = 2;
+}

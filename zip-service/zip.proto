@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package zip;
+
+// Message pour la demande de zippage
+message ZipRequest {
+  string sourceDir = 1;  // Répertoire à compresser
+  string outputZipPath = 2;  // Chemin du fichier ZIP de sortie
+}
+
+// Message de réponse après zippage
+message ZipResponse {
+  bool success = 1;  // Indicateur de succès
+  string message = 2;  // Message de résultat
+}
+
+// Service de compression ZIP
+service ZipService {
+  rpc ZipDirectory (ZipRequest) returns (ZipResponse);
+}

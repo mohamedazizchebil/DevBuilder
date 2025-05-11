@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package storage;
+
+service StorageService {
+  rpc StoreZip (StoreZipRequest) returns (StoreZipResponse);
+}
+
+message StoreZipRequest {
+  string fileName = 1;
+  bytes zipData = 2;
+}
+
+message StoreZipResponse {
+  bool success = 1;
+  string message = 2;
+  string filePath = 3;
+}

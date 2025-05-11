@@ -1,0 +1,17 @@
+// grpc/proto/validation.proto
+syntax = "proto3";
+package validation;
+service ValidationService {
+    rpc validate (ValidationRequest) returns (ValidationResponse);
+}
+
+message ValidationRequest {
+    string framework = 1;
+    string language = 2;
+    string projectName = 3; 
+}
+
+message ValidationResponse {
+    bool isValid = 1;
+    string details = 2;
+}
