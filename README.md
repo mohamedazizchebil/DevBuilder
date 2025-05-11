@@ -111,7 +111,6 @@ mutation {
       framework: "flask"
     }
   ) {
-    status
     message
   }
 }
