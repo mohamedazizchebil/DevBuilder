@@ -11,7 +11,6 @@ A modular backend code generation platform that scaffolds project structures in 
 - 🛠️ Technologies Used
 - 🏗️ Architecture Overview
 - 🎯 Innovation Highlights
-- 🌱 Future Enhancements
 - 📦 Dependencies & Installation
 - 🧪 Testing Guide
 - 📁 .gitignore
@@ -59,8 +58,6 @@ GenerationService
 ZipService
   ↓ (gRPC)
 StorageService
-  ↓ (Kafka event)
-NotificationService
 ```
 
 ---
@@ -69,7 +66,6 @@ NotificationService
 - Combines REST, GraphQL, gRPC in a single system  
 - Modular: each service is independently scalable and testable  
 - Pluggable architecture for adding more frameworks, databases, etc.  
-- Can be integrated in a CI/CD pipeline for automated backend scaffolding
 
 
 ---
